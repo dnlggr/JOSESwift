@@ -41,23 +41,29 @@ If you are missing a specific feature, algorithm, or serialization, feel free to
 		<th rowspan="18"></th>
 		<th colspan="2">🔑 JWK</th>
 	</tr>
-	<tr><td><code>HS256</code></td><td></td>                    <td><code>RSA1_5</code></td><td>:white_check_mark:</td>       <td><code>A128CBC-HS256</code></td><td></td>                   <td><code>RSA</code></td><td>:white_check_mark:</td></tr>
-	<tr><td><code>HS384</code></td><td></td>                    <td><code>RSA-OAEP</code></td><td></td>                       <td><code>A128CBC-HS384</code></td><td></td>                   <td><code>EC</code></td><td>:white_check_mark:</td></tr>
-	<tr><td><code>HS512</code></td><td></td>                    <td><code>RSA-OAEP-256</code></td><td>:white_check_mark:</td> <td><code>A128CBC-HS512</code></td><td>:white_check_mark:</td> <td><code>oct</code></td><td>:white_check_mark:</td></tr>
-	<tr><td><code>RS256</code></td><td>:white_check_mark:</td>  <td><code>A128KW</code></td><td></td>                         <td><code>A128GCM</code></td><td></td>                         <th rowspan="14"></th><th rowspan="14"></th></tr>
-	<tr><td><code>RS384</code></td><td></td>                    <td><code>A192KW</code></td><td></td>                         <td><code>A192GCM</code></td><td></td>
-	<tr><td><code>RS512</code></td><td>:white_check_mark:</td>  <td><code>A256KW</code></td><td></td>                         <td><code>A256GCM</code></td><td></td>
-	<tr><td><code>ES256</code></td><td>:white_check_mark:</td>  <td><code>dir</code></td><td>:white_check_mark:</td>          <th rowspan="11"></th><th rowspan="11"></th></tr>
-	<tr><td><code>ES384</code></td><td>:white_check_mark:</td>  <td><code>ECDH-ES</code></td><td></td></tr>
-	<tr><td><code>ES512</code></td><td>:white_check_mark:</td>  <td><code>ECDH-ES+A128KW</code></td><td></td></tr>
-	<tr><td><code>PS256</code></td><td></td>                    <td><code>ECDH-ES+A192KW</code></td><td></td></tr>
-	<tr><td><code>PS384</code></td><td></td>                    <td><code>ECDH-ES+A256KW</code></td><td></td></tr>
-	<tr><td><code>PS512</code></td><td></td>                    <td><code>A128GCMKW</code></td><td></td></tr>
-	<tr><th rowspan="5"></th><th rowspan="5"></th>   <td><code>A192GCMKW</code></td><td></td></tr>
-	<tr>                                             <td><code>A256GCMKW</code></td><td></td></tr>
-	<tr>                                             <td><code>PBES2-HS256+A128KW</code></td><td></td></tr>
-	<tr>                                             <td><code>PBES2-HS384+A192KW</code></td><td></td></tr>
-	<tr>                                             <td><code>PBES2-HS512+A256KW</code></td><td></td></tr>
+	<tr>
+		<th colspan="2">Digital Signatures and MACs</th>
+		<th colspan="2">Key Management</th>
+		<th colspan="2">Content Encryption</th>
+		<th colspan="2">Keys</th>
+	</tr>
+	<tr><td><code>HS256</code></td><td></td>                   <td><code>RSA1_5</code></td><td>:white_check_mark:</td>       <td><code>A128CBC-HS256</code></td><td></td>                   <td><code>RSA</code></td><td>:white_check_mark:</td></tr>
+	<tr><td><code>HS384</code></td><td></td>                   <td><code>RSA-OAEP</code></td><td></td>                       <td><code>A128CBC-HS384</code></td><td></td>                   <td><code>EC</code></td><td>:white_check_mark:</td></tr>
+	<tr><td><code>HS512</code></td><td></td>                   <td><code>RSA-OAEP-256</code></td><td>:white_check_mark:</td> <td><code>A128CBC-HS512</code></td><td>:white_check_mark:</td> <td><code>oct</code></td><td>:white_check_mark:</td></tr>
+	<tr><td><code>RS256</code></td><td>:white_check_mark:</td> <td><code>A128KW</code></td><td></td>                         <td><code>A128GCM</code></td><td></td>                         <th rowspan="14"></th><th rowspan="14"></th></tr>
+	<tr><td><code>RS384</code></td><td></td>                   <td><code>A192KW</code></td><td></td>                         <td><code>A192GCM</code></td><td></td>
+	<tr><td><code>RS512</code></td><td>:white_check_mark:</td> <td><code>A256KW</code></td><td></td>                         <td><code>A256GCM</code></td><td></td>
+	<tr><td><code>ES256</code></td><td>:white_check_mark:</td> <td><code>dir</code></td><td>:white_check_mark:</td>          <th rowspan="11"></th><th rowspan="11"></th></tr>
+	<tr><td><code>ES384</code></td><td>:white_check_mark:</td> <td><code>ECDH-ES</code></td><td></td></tr>
+	<tr><td><code>ES512</code></td><td>:white_check_mark:</td> <td><code>ECDH-ES+A128KW</code></td><td></td></tr>
+	<tr><td><code>PS256</code></td><td></td>                   <td><code>ECDH-ES+A192KW</code></td><td></td></tr>
+	<tr><td><code>PS384</code></td><td></td>                   <td><code>ECDH-ES+A256KW</code></td><td></td></tr>
+	<tr><td><code>PS512</code></td><td></td>                   <td><code>A128GCMKW</code></td><td></td></tr>
+	<tr><th rowspan="5"></th><th rowspan="5"></th>             <td><code>A192GCMKW</code></td><td></td></tr>
+	<tr>                                                       <td><code>A256GCMKW</code></td><td></td></tr>
+	<tr>                                                       <td><code>PBES2-HS256+A128KW</code></td><td></td></tr>
+	<tr>                                                       <td><code>PBES2-HS384+A192KW</code></td><td></td></tr>
+	<tr>                                                       <td><code>PBES2-HS512+A256KW</code></td><td></td></tr>
 </table>
 
 ## Installation
