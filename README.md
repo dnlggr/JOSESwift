@@ -41,32 +41,32 @@ If you are missing a specific feature, algorithm, or serialization, feel free to
 		<th rowspan="18"></th>
 		<th colspan="2">🔑 JWK</th>
 	</tr>
-	<tr><td>`HS256`</td><td></td>                    <td>`RSA1_5`</td><td>:white_check_mark:</td>       <td>`A128CBC-HS256`</td><td></td>                   <td>`RSA`</td><td>:white_check_mark:</td></tr>
-	<tr><td>`HS384`</td><td></td>                    <td>`RSA-OAEP`</td><td></td>                       <td>`A128CBC-HS384`</td><td></td>                   <td>`EC`</td><td>:white_check_mark:</td></tr>
-	<tr><td>`HS512`</td><td></td>                    <td>`RSA-OAEP-256`</td><td>:white_check_mark:</td> <td>`A128CBC-HS512`</td><td>:white_check_mark:</td> <td>`oct`</td><td>:white_check_mark:</td></tr>
-	<tr><td>`RS256`</td><td>:white_check_mark:</td>  <td>`A128KW`</td><td></td>                         <td>`A128GCM`</td><td></td>                         <th rowspan="14"></th><th rowspan="14"></th></tr>
-	<tr><td>`RS384`</td><td></td>                    <td>`A192KW`</td><td></td>                         <td>`A192GCM`</td><td></td>
-	<tr><td>`RS512`</td><td>:white_check_mark:</td>  <td>`A256KW`</td><td></td>                         <td>`A256GCM`</td><td></td>
-	<tr><td>`ES256`</td><td>:white_check_mark:</td>  <td>`dir`</td><td>:white_check_mark:</td>          <th rowspan="11"></th><th rowspan="11"></th></tr>
-	<tr><td>`ES384`</td><td>:white_check_mark:</td>  <td>`ECDH-ES`</td><td></td></tr>
-	<tr><td>`ES512`</td><td>:white_check_mark:</td>  <td>`ECDH-ES+A128KW`</td><td></td></tr>
-	<tr><td>`PS256`</td><td></td>                    <td>`ECDH-ES+A192KW`</td><td></td></tr>
-	<tr><td>`PS384`</td><td></td>                    <td>`ECDH-ES+A256KW`</td><td></td></tr>
-	<tr><td>`PS512`</td><td></td>                    <td>`A128GCMKW`</td><td></td></tr>
-	<tr><th rowspan="5"></th><th rowspan="5"></th>   <td>`A192GCMKW`</td><td></td></tr>
-	<tr>                                             <td>`A256GCMKW`</td><td></td></tr>
-	<tr>                                             <td>`PBES2-HS256+A128KW`</td><td></td></tr>
-	<tr>                                             <td>`PBES2-HS384+A192KW`</td><td></td></tr>
-	<tr>                                             <td>`PBES2-HS512+A256KW`</td><td></td></tr>
+	<tr><td><code>HS256</code></td><td></td>                    <td><code>RSA1_5</code></td><td>:white_check_mark:</td>       <td><code>A128CBC-HS256</code></td><td></td>                   <td><code>RSA</code></td><td>:white_check_mark:</td></tr>
+	<tr><td><code>HS384</code></td><td></td>                    <td><code>RSA-OAEP</code></td><td></td>                       <td><code>A128CBC-HS384</code></td><td></td>                   <td><code>EC</code></td><td>:white_check_mark:</td></tr>
+	<tr><td><code>HS512</code></td><td></td>                    <td><code>RSA-OAEP-256</code></td><td>:white_check_mark:</td> <td><code>A128CBC-HS512</code></td><td>:white_check_mark:</td> <td><code>oct</code></td><td>:white_check_mark:</td></tr>
+	<tr><td><code>RS256</code></td><td>:white_check_mark:</td>  <td><code>A128KW</code></td><td></td>                         <td><code>A128GCM</code></td><td></td>                         <th rowspan="14"></th><th rowspan="14"></th></tr>
+	<tr><td><code>RS384</code></td><td></td>                    <td><code>A192KW</code></td><td></td>                         <td><code>A192GCM</code></td><td></td>
+	<tr><td><code>RS512</code></td><td>:white_check_mark:</td>  <td><code>A256KW</code></td><td></td>                         <td><code>A256GCM</code></td><td></td>
+	<tr><td><code>ES256</code></td><td>:white_check_mark:</td>  <td><code>dir</code></td><td>:white_check_mark:</td>          <th rowspan="11"></th><th rowspan="11"></th></tr>
+	<tr><td><code>ES384</code></td><td>:white_check_mark:</td>  <td><code>ECDH-ES</code></td><td></td></tr>
+	<tr><td><code>ES512</code></td><td>:white_check_mark:</td>  <td><code>ECDH-ES+A128KW</code></td><td></td></tr>
+	<tr><td><code>PS256</code></td><td></td>                    <td><code>ECDH-ES+A192KW</code></td><td></td></tr>
+	<tr><td><code>PS384</code></td><td></td>                    <td><code>ECDH-ES+A256KW</code></td><td></td></tr>
+	<tr><td><code>PS512</code></td><td></td>                    <td><code>A128GCMKW</code></td><td></td></tr>
+	<tr><th rowspan="5"></th><th rowspan="5"></th>   <td><code>A192GCMKW</code></td><td></td></tr>
+	<tr>                                             <td><code>A256GCMKW</code></td><td></td></tr>
+	<tr>                                             <td><code>PBES2-HS256+A128KW</code></td><td></td></tr>
+	<tr>                                             <td><code>PBES2-HS384+A192KW</code></td><td></td></tr>
+	<tr>                                             <td><code>PBES2-HS512+A256KW</code></td><td></td></tr>
 </table>
 
 ## Installation
 
 ### CocoaPods
 
-To integrate JOSESwift into your Xcode project, include it in your `Podfile`:
+To integrate JOSESwift into your Xcode project, include it in your <code>Podfile<code>:
 
-``` ruby
+</code><code><code> ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 use_frameworks!
@@ -74,19 +74,19 @@ use_frameworks!
 target '<Your Target Name>' do
     pod 'JOSESwift'
 end
-```
+</code><code><code>
 
-Then install it by running `pod install`. More documentation on using CocoaPods can be found [here](https://cocoapods.org).
+Then install it by running <code>pod install<code>. More documentation on using CocoaPods can be found [here](https://cocoapods.org).
 
 ### Carthage
 
-To integrate JOSESwift in your Xcode project, include it in your `Cartfile`:
+To integrate JOSESwift in your Xcode project, include it in your <code>Cartfile<code>:
 
-```
+</code><code><code>
 github "airsidemobile/JOSESwift"
-```
+</code><code><code>
 
-Then build it by running `carthage update` and drag the built framework into your Xcode project. More documentation on using Carthage can be found [here](https://github.com/Carthage/Carthage).
+Then build it by running <code>carthage update<code> and drag the built framework into your Xcode project. More documentation on using Carthage can be found [here](https://github.com/Carthage/Carthage).
 
 ## Usage
 
@@ -106,7 +106,7 @@ JOSESwift covers three functional aspects:
 
 ### JWS: Digital Signatures
 
-A `JWS` encapsulates and secures data using a digital signature which can be verified by the receiver of the `JWS`.
+A <code>JWS<code> encapsulates and secures data using a digital signature which can be verified by the receiver of the <code>JWS<code>.
 
 #### Signing Data
 
@@ -118,57 +118,57 @@ In order to construct a JWS we need to provide the following parts:
 
 ##### Header
 
-``` swift
+</code><code><code> swift
 let header = JWSHeader(algorithm: .RS512)
-```
+</code><code><code>
 
 Optionally you can set [addtitional parameters](https://tools.ietf.org/html/rfc7515#section-4.1):
 
-``` swift
+</code><code><code> swift
 header.kid = "2018-10-08"
 
 header.typ = "JWS"
-```
+</code><code><code>
 
 ##### Payload
 
-``` swift
+</code><code><code> swift
 let message = "Summer ⛱, Sun ☀️, Cactus 🌵".data(using: .utf8)!
 
 let payload = Payload(message)
-```
+</code><code><code>
 
 ##### Signer
 
 The signer algorithm must match the header algorithm.
 
-``` swift
+</code><code><code> swift
 let privateKey: SecKey = /* ... */
 
 let signer = Signer(signingAlgorithm: .RS512, privateKey: privateKey)!
-```
+</code><code><code>
 
 ##### Serializing
 
 The JWS compact serialization is a URL-safe string that can easily be transmitted to a third party using a method of your choice.
 
-``` swift
+</code><code><code> swift
 guard let jws = try? JWS(header: header, payload: payload, signer: signer) else { ... }
 
 print(jws.compactSerializedString) // ey (...) J9.U3 (...) LU.na (...) 1A
-```  
+</code><code><code>  
 
 More details about constructing a JWS can be found [in the wiki](../../wiki/jws).
 
 #### Verifying Data
 
-``` swift
+</code><code><code> swift
 let publicKey: SecKey = /* ... */
 
 let serialization = "ey (..) n0.HK (..) pQ.yS (..) PA.AK (..) Jx.hB (..) 7w"
-```
+</code><code><code>
 
-``` swift
+</code><code><code> swift
 do {
     let jws = try JWS(compactSerialization: serialization)
     let verifier = Verifier(verifyingAlgorithm: .RS512, publicKey: publicKey)!
@@ -177,7 +177,7 @@ do {
 
     print(message) // Summer ⛱, Sun ☀️, Cactus 🌵
 }
-```
+</code><code><code>
 
 More details about verifying an existing, serialized JWS can be found [in the wiki](../../wiki/jws).
 
@@ -197,57 +197,57 @@ In order to construct a JWE we need to provide the following parts:
 
 ##### Header
 
-``` swift
+</code><code><code> swift
 let header = JWEHeader(algorithm: .RSA1_5, encryptionAlgorithm: .A256CBCHS512)
-```
+</code><code><code>
 
 Optionally you can set [addtitional parameters](https://tools.ietf.org/html/rfc7516#section-4.1):
 
-``` swift
+</code><code><code> swift
 header.kid = "2018-10-08"
 
 header.typ = "JWE"
-```
+</code><code><code>
 
 ##### Payload
 
-``` swift
+</code><code><code> swift
 let message = "Summer ⛱, Sun ☀️, Cactus 🌵".data(using: .utf8)!
 
 let payload = Payload(message)
-```
+</code><code><code>
 
 ##### Encrypter
 
 The encrypter algorithms must match the header algorithms.
 
-``` swift
+</code><code><code> swift
 let publicKey: SecKey = /* ... */
 
 let encrypter = Encrypter(keyEncryptionAlgorithm: .RSA1_5, encryptionKey: publicKey, contentEncyptionAlgorithm: .A256CBCHS512)!
-```
+</code><code><code>
 
 ##### Serialization
 
 The JWE compact serialization is a URL-safe string that can easily be transmitted to a third party using a method of your choice.
 
-``` swift
+</code><code><code> swift
 guard let jwe = try? JWE(header: header, payload: payload, encrypter: encrypter) else { ... }
 
 print(jwe.compactSerializedString) // ey (..) n0.HK (..) pQ.yS (..) PA.AK (..) Jx.hB (..) 7w
-```  
+</code><code><code>  
 
 More details about constructing a JWE can be found [in the wiki](../../wiki/jwe).
 
 #### Decrypting Data
 
-``` swift
+</code><code><code> swift
 let privateKey: SecKey = /* ... */
 
 let serialization = "ey (..) n0.HK (..) pQ.yS (..) PA.AK (..) Jx.hB (..) 7w"
-```
+</code><code><code>
 
-``` swift
+</code><code><code> swift
 do {
     let jwe = try JWE(compactSerialization: serialization)
     let decrypter = Decrypter(keyDecryptionAlgorithm: .RSA1_5, decryptionKey: privateKey, contentDecryptionAlgorithm: .A256CBCHS512)!
@@ -256,7 +256,7 @@ do {
 
     print(message) // Summer ⛱, Sun ☀️, Cactus 🌵
 }
-```
+</code><code><code>
 
 More details about decrypting an existing, serialized JWE can be found [in the wiki](../../wiki/jwe).
 
@@ -268,29 +268,29 @@ A JWK is a JSON data structure that represents a cryptographic key. You could us
 
 #### Encoding RSA Public Keys
 
-``` swift
+</code><code><code> swift
 let publicKey: SecKey = /* ... */
 
 let jwk = try! RSAPublicKey(publicKey: publicKey)
 
 let json = jwk.jsonString()! // {"kty":"RSA","n":"MHZ4L...uS2d3","e":"QVFBQg"}
-```
+</code><code><code>
 
 More details about encoding RSA public keys can be found [in the wiki](../../wiki/jwk).
 
 #### Decoding RSA Public Keys
 
-``` swift
+</code><code><code> swift
 let json: Data = /* ... */
 
 let jwk = try! RSAPublicKey(data: json)
 
 let publicKey: SecKey = try! jwk.converted(to: SecKey.self)
-```
+</code><code><code>
 
 More details about decoding RSA public keys can be found [in the wiki](../../wiki/jwk).
 
-:warning: We currently ignore the key parameters [`"key_ops"`](https://tools.ietf.org/html/rfc7517#section-4.3) and [`"x5c"`](https://tools.ietf.org/html/rfc7517#section-4.7) when decoding. This is due to a bug in our decoding implementation. See [#117](https://github.com/airsidemobile/JOSESwift/issues/117) for details.
+:warning: We currently ignore the key parameters [<code>"key_ops"<code>](https://tools.ietf.org/html/rfc7517#section-4.3) and [<code>"x5c"<code>](https://tools.ietf.org/html/rfc7517#section-4.7) when decoding. This is due to a bug in our decoding implementation. See [#117](https://github.com/airsidemobile/JOSESwift/issues/117) for details.
 
 ## Security
 
