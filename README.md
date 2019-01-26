@@ -33,49 +33,32 @@ As of now, usage is limited to iOS. See [Security](#security) for details.
 
 If you are missing a specific feature, algorithm, or serialization, feel free to [submit a pull request](#contributing).
 
-### General
-
-*Supported serializations:*
-
-| Compact Serialization | JSON Serialization |
-| :-------------------: | :----------------: |
-| :white_check_mark:    |                    |
-
-### JWS :pencil:
-
-Digitally signing and verifying arbitrary data using the JWS standard.
-
-*Supported algorithms:*
-
-| HS256 | HS384 | HS512 | RS256 | RS384 | RS512 | ES256 | ES384 | ES512 | PS256  | PS384 | PS512 |
-| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| | | | :white_check_mark: | | :white_check_mark: | | | | | | |
-
-### JWE :lock:
-
-Encrypting and decrypting arbitrary data using the JWE standard.
-
-*Supported key encryption algorithms:*
-
-| RSA1_5 | RSA-OAEP | RSA-OAEP-256 | A128KW | A192KW | A256KW | dir | ECDH-ES | ECDH-ES+A128KW | ECDH-ES+A192KW | ECDH-ES+A256KW | A128GCMKW | A192GCMKW | A256GCMKW | PBES2-HS256+A128KW | PBES2-HS384+A192KW | PBES2-HS512+A256KW |
-| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | 
-| :white_check_mark: | | | | | | :white_check_mark: | | | | | | | | | | |
-
-*Supported content encryption algorithms:*
-
-| A128CBC-HS256 | A192CBC-HS384 | A256CBC-HS512 | A128GCM | A192GCM | A256GCM |
-| :--: | :--: | :--: | :--: | :--: | :--: |
-| | | :white_check_mark: | | | |
-
-### JWK :key:
-
-Encoding and decoding RSA public key data in PKCS#1 format as well as iOS `SecKey`s.
-
-*Supported key types:*
-
-| EC | RSA | oct |
-| :--: | :--: | :--: |
-| | :white_check_mark: | :white_check_mark: |
+<table>
+	<tr>
+		<th colspan="2">🔏 JWS</th>
+		<th rowspan="18"></th>
+		<th colspan="4">🔐 JWE</th>
+		<th rowspan="18"></th>
+		<th colspan="2">🔑 JWK</th>
+	</tr>
+	<tr><td>HS256</td><td></td>                    <td>RSA1_5</td><td>:white_check_mark:</td>       <td>A128CBC-HS256</td><td></td>                   <td>RSA</td><td>:white_check_mark:</td></tr>
+	<tr><td>HS384</td><td></td>                    <td>RSA-OAEP</td><td></td>                       <td>A128CBC-HS384</td><td></td>                   <td>EC</td><td>:white_check_mark:</td></tr>
+	<tr><td>HS512</td><td></td>                    <td>RSA-OAEP-256</td><td>:white_check_mark:</td> <td>A128CBC-HS512</td><td>:white_check_mark:</td> <td>oct</td><td>:white_check_mark:</td></tr>
+	<tr><td>RS256</td><td>:white_check_mark:</td>  <td>A128KW</td><td></td>                         <td>A128GCM</td><td></td>                         <th rowspan="14"></th><th rowspan="14"></th></tr>
+	<tr><td>RS384</td><td></td>                    <td>A192KW</td><td></td>                         <td>A192GCM</td><td></td>
+	<tr><td>RS512</td><td>:white_check_mark:</td>  <td>A256KW</td><td></td>                         <td>A256GCM</td><td></td>
+	<tr><td>ES256</td><td>:white_check_mark:</td>  <td>dir</td><td>:white_check_mark:</td>          <th rowspan="11"></th><th rowspan="11"></th></tr>
+	<tr><td>ES384</td><td>:white_check_mark:</td>  <td>ECDH-ES</td><td></td></tr>
+	<tr><td>ES512</td><td>:white_check_mark:</td>  <td>ECDH-ES+A128KW</td><td></td></tr>
+	<tr><td>PS256</td><td></td>                    <td>ECDH-ES+A192KW</td><td></td></tr>
+	<tr><td>PS384</td><td></td>                    <td>ECDH-ES+A256KW</td><td></td></tr>
+	<tr><td>PS512</td><td></td>                    <td>A128GCMKW</td><td></td></tr>
+	<tr><th rowspan="5"></th><th rowspan="5"></th> <td>A192GCMKW</td><td></td></tr>
+	<tr>                                           <td>A256GCMKW</td><td></td></tr>
+	<tr>                                           <td>PBES2-HS256+A128KW</td><td></td></tr>
+	<tr>                                           <td>PBES2-HS384+A192KW</td><td></td></tr>
+	<tr>                                           <td>PBES2-HS512+A256KW</td><td></td></tr>
+</table>
 
 ## Installation
 
