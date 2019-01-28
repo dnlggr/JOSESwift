@@ -70,9 +70,9 @@ If you are missing a specific feature, algorithm, or serialization, feel free to
 
 ### CocoaPods
 
-To integrate JOSESwift into your Xcode project, include it in your <code>Podfile<code>:
+To integrate JOSESwift into your Xcode project, include it in your `Podfile`:
 
-</code><code><code> ruby
+``` ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 use_frameworks!
@@ -80,19 +80,19 @@ use_frameworks!
 target '<Your Target Name>' do
     pod 'JOSESwift'
 end
-</code><code><code>
+```
 
-Then install it by running <code>pod install<code>. More documentation on using CocoaPods can be found [here](https://cocoapods.org).
+Then install it by running `pod install`. More documentation on using CocoaPods can be found [here](https://cocoapods.org).
 
 ### Carthage
 
-To integrate JOSESwift in your Xcode project, include it in your <code>Cartfile<code>:
+To integrate JOSESwift in your Xcode project, include it in your `Cartfile`:
 
-</code><code><code>
+```
 github "airsidemobile/JOSESwift"
-</code><code><code>
+```
 
-Then build it by running <code>carthage update<code> and drag the built framework into your Xcode project. More documentation on using Carthage can be found [here](https://github.com/Carthage/Carthage).
+Then build it by running `carthage update` and drag the built framework into your Xcode project. More documentation on using Carthage can be found [here](https://github.com/Carthage/Carthage).
 
 ## Usage
 
@@ -112,7 +112,7 @@ JOSESwift covers three functional aspects:
 
 ### JWS: Digital Signatures
 
-A <code>JWS<code> encapsulates and secures data using a digital signature which can be verified by the receiver of the <code>JWS<code>.
+A `JWS` encapsulates and secures data using a digital signature which can be verified by the receiver of the `JWS`.
 
 #### Signing Data
 
@@ -124,57 +124,57 @@ In order to construct a JWS we need to provide the following parts:
 
 ##### Header
 
-</code><code><code> swift
+``` swift
 let header = JWSHeader(algorithm: .RS512)
-</code><code><code>
+```
 
 Optionally you can set [addtitional parameters](https://tools.ietf.org/html/rfc7515#section-4.1):
 
-</code><code><code> swift
+``` swift
 header.kid = "2018-10-08"
 
 header.typ = "JWS"
-</code><code><code>
+```
 
 ##### Payload
 
-</code><code><code> swift
+``` swift
 let message = "Summer ⛱, Sun ☀️, Cactus 🌵".data(using: .utf8)!
 
 let payload = Payload(message)
-</code><code><code>
+```
 
 ##### Signer
 
 The signer algorithm must match the header algorithm.
 
-</code><code><code> swift
+``` swift
 let privateKey: SecKey = /* ... */
 
 let signer = Signer(signingAlgorithm: .RS512, privateKey: privateKey)!
-</code><code><code>
+```
 
 ##### Serializing
 
 The JWS compact serialization is a URL-safe string that can easily be transmitted to a third party using a method of your choice.
 
-</code><code><code> swift
+``` swift
 guard let jws = try? JWS(header: header, payload: payload, signer: signer) else { ... }
 
 print(jws.compactSerializedString) // ey (...) J9.U3 (...) LU.na (...) 1A
-</code><code><code>  
+```  
 
 More details about constructing a JWS can be found [in the wiki](../../wiki/jws).
 
 #### Verifying Data
 
-</code><code><code> swift
+``` swift
 let publicKey: SecKey = /* ... */
 
 let serialization = "ey (..) n0.HK (..) pQ.yS (..) PA.AK (..) Jx.hB (..) 7w"
-</code><code><code>
+```
 
-</code><code><code> swift
+``` swift
 do {
     let jws = try JWS(compactSerialization: serialization)
     let verifier = Verifier(verifyingAlgorithm: .RS512, publicKey: publicKey)!
@@ -183,7 +183,7 @@ do {
 
     print(message) // Summer ⛱, Sun ☀️, Cactus 🌵
 }
-</code><code><code>
+```
 
 More details about verifying an existing, serialized JWS can be found [in the wiki](../../wiki/jws).
 
@@ -203,57 +203,57 @@ In order to construct a JWE we need to provide the following parts:
 
 ##### Header
 
-</code><code><code> swift
+``` swift
 let header = JWEHeader(algorithm: .RSA1_5, encryptionAlgorithm: .A256CBCHS512)
-</code><code><code>
+```
 
 Optionally you can set [addtitional parameters](https://tools.ietf.org/html/rfc7516#section-4.1):
 
-</code><code><code> swift
+``` swift
 header.kid = "2018-10-08"
 
 header.typ = "JWE"
-</code><code><code>
+```
 
 ##### Payload
 
-</code><code><code> swift
+``` swift
 let message = "Summer ⛱, Sun ☀️, Cactus 🌵".data(using: .utf8)!
 
 let payload = Payload(message)
-</code><code><code>
+```
 
 ##### Encrypter
 
 The encrypter algorithms must match the header algorithms.
 
-</code><code><code> swift
+``` swift
 let publicKey: SecKey = /* ... */
 
 let encrypter = Encrypter(keyEncryptionAlgorithm: .RSA1_5, encryptionKey: publicKey, contentEncyptionAlgorithm: .A256CBCHS512)!
-</code><code><code>
+```
 
 ##### Serialization
 
 The JWE compact serialization is a URL-safe string that can easily be transmitted to a third party using a method of your choice.
 
-</code><code><code> swift
+``` swift
 guard let jwe = try? JWE(header: header, payload: payload, encrypter: encrypter) else { ... }
 
 print(jwe.compactSerializedString) // ey (..) n0.HK (..) pQ.yS (..) PA.AK (..) Jx.hB (..) 7w
-</code><code><code>  
+```  
 
 More details about constructing a JWE can be found [in the wiki](../../wiki/jwe).
 
 #### Decrypting Data
 
-</code><code><code> swift
+``` swift
 let privateKey: SecKey = /* ... */
 
 let serialization = "ey (..) n0.HK (..) pQ.yS (..) PA.AK (..) Jx.hB (..) 7w"
-</code><code><code>
+```
 
-</code><code><code> swift
+``` swift
 do {
     let jwe = try JWE(compactSerialization: serialization)
     let decrypter = Decrypter(keyDecryptionAlgorithm: .RSA1_5, decryptionKey: privateKey, contentDecryptionAlgorithm: .A256CBCHS512)!
@@ -262,7 +262,7 @@ do {
 
     print(message) // Summer ⛱, Sun ☀️, Cactus 🌵
 }
-</code><code><code>
+```
 
 More details about decrypting an existing, serialized JWE can be found [in the wiki](../../wiki/jwe).
 
@@ -274,29 +274,29 @@ A JWK is a JSON data structure that represents a cryptographic key. You could us
 
 #### Encoding RSA Public Keys
 
-</code><code><code> swift
+``` swift
 let publicKey: SecKey = /* ... */
 
 let jwk = try! RSAPublicKey(publicKey: publicKey)
 
 let json = jwk.jsonString()! // {"kty":"RSA","n":"MHZ4L...uS2d3","e":"QVFBQg"}
-</code><code><code>
+```
 
 More details about encoding RSA public keys can be found [in the wiki](../../wiki/jwk).
 
 #### Decoding RSA Public Keys
 
-</code><code><code> swift
+``` swift
 let json: Data = /* ... */
 
 let jwk = try! RSAPublicKey(data: json)
 
 let publicKey: SecKey = try! jwk.converted(to: SecKey.self)
-</code><code><code>
+```
 
 More details about decoding RSA public keys can be found [in the wiki](../../wiki/jwk).
 
-:warning: We currently ignore the key parameters [<code>"key_ops"<code>](https://tools.ietf.org/html/rfc7517#section-4.3) and [<code>"x5c"<code>](https://tools.ietf.org/html/rfc7517#section-4.7) when decoding. This is due to a bug in our decoding implementation. See [#117](https://github.com/airsidemobile/JOSESwift/issues/117) for details.
+:warning: We currently ignore the key parameters [`"key_ops"`](https://tools.ietf.org/html/rfc7517#section-4.3) and [`"x5c"`](https://tools.ietf.org/html/rfc7517#section-4.7) when decoding. This is due to a bug in our decoding implementation. See [#117](https://github.com/airsidemobile/JOSESwift/issues/117) for details.
 
 ## Security
 
