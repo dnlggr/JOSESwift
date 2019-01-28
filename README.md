@@ -44,10 +44,10 @@ As of now, usage is limited to iOS. See [Security](#security) for details.
 		<th colspan="2">🔑 JWK</th>
 	</tr>
 	<tr>
-		<th colspan="2">Digital Signatures and MACs</th>
-		<th colspan="2">Key Management</th>
-		<th colspan="2">Content Encryption</th>
-		<th colspan="2">Keys</th>
+		<th colspan="2"><a href="https://tools.ietf.org/html/rfc7518#section-3">Digital Signatures and MACs</a></th>
+		<th colspan="2"><a href="https://tools.ietf.org/html/rfc7518#section-4">Key Management</a></th>
+		<th colspan="2"><a href="https://tools.ietf.org/html/rfc7518#section-5">Content Encryption</a></th>
+		<th colspan="2"><a href="https://tools.ietf.org/html/rfc7518#section-6">Keys</a></th>
 	</tr>
 	<tr><td><code>HS256</code></td><td></td>                   <td><code>RSA1_5</code></td><td>:white_check_mark:</td>       <td><code>A128CBC-HS256</code></td><td></td>                   <td><code>RSA</code></td><td>:white_check_mark:</td></tr>
 	<tr><td><code>HS384</code></td><td></td>                   <td><code>RSA-OAEP</code></td><td></td>                       <td><code>A128CBC-HS384</code></td><td></td>                   <td><code>EC</code></td><td>:white_check_mark:</td></tr>
