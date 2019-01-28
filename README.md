@@ -31,7 +31,9 @@ As of now, usage is limited to iOS. See [Security](#security) for details.
 
 ## Features
 
-If you are missing a specific feature, algorithm, or serialization, feel free to [submit a pull request](#contributing).
+- **JWS**: Digitally signing and verifying arbitrary data using the JWS standard.
+- **JWE**: Encrypting and decrypting arbitrary data using the JWE standard.
+- **JWK**: Encoding and decoding cryptographic keys.
 
 <table>
 	<tr>
@@ -65,6 +67,8 @@ If you are missing a specific feature, algorithm, or serialization, feel free to
 	<tr>                                                       <td><code>PBES2-HS384+A192KW</code></td><td></td></tr>
 	<tr>                                                       <td><code>PBES2-HS512+A256KW</code></td><td></td></tr>
 </table>
+
+If you are missing a specific feature, algorithm, or serialization, feel free to [submit a pull request](#contributing).
 
 ## Installation
 
