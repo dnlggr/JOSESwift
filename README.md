@@ -3,7 +3,7 @@
 <br>
 
 **JOSESwift** is a modular and extensible framework for the [JOSE](https://datatracker.ietf.org/wg/jose/about/) standards [**JWS**](https://tools.ietf.org/html/rfc7515), [**JWE**](https://tools.ietf.org/html/rfc7516), and [**JWK**](https://tools.ietf.org/html/rfc7517) written in Swift. 
-It is designed with usage on iOS and pure Swift environments in mind.
+It is designed for usage on iOS but could be extended for usage in pure Swift environments.
 
 [![Build Status](https://travis-ci.org/airsidemobile/JOSESwift.svg?branch=master)](https://travis-ci.org/airsidemobile/JOSESwift)
 
@@ -36,9 +36,9 @@ If you are missing a specific feature, algorithm, or serialization, feel free to
 <table>
 	<tr>
 		<th colspan="2">🔏 JWS</th>
-		<th rowspan="18"></th>
+		<th rowspan="19"></th>
 		<th colspan="4">🔐 JWE</th>
-		<th rowspan="18"></th>
+		<th rowspan="19"></th>
 		<th colspan="2">🔑 JWK</th>
 	</tr>
 	<tr>
