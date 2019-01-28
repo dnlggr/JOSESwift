@@ -17,7 +17,6 @@ As of now, usage is limited to iOS. See [Security](#security) for details.
 - [Installation](#installation)
 	- [CocoaPods](#cocoapods)
 	- [Carthage](#carthage)
-	- [Swift Package Manager](#swift-package-manager)
 - [Usage](#usage)
 	- [JWS: Digital Signatures](#jws-digital-signatures)
 	- [JWE: Encryption and Decryption](#jwe-encryption-and-decryption)
@@ -34,6 +33,8 @@ As of now, usage is limited to iOS. See [Security](#security) for details.
 - **JWS**: Digitally signing and verifying arbitrary data using the JWS standard.
 - **JWE**: Encrypting and decrypting arbitrary data using the JWE standard.
 - **JWK**: Encoding and decoding cryptographic keys.
+
+JOSESwift currently supports the following cryptographic algorithms:
 
 <table>
 	<tr>
@@ -66,6 +67,15 @@ As of now, usage is limited to iOS. See [Security](#security) for details.
 	<tr>                                                       <td><code>PBES2-HS256+A128KW</code></td><td></td></tr>
 	<tr>                                                       <td><code>PBES2-HS384+A192KW</code></td><td></td></tr>
 	<tr>                                                       <td><code>PBES2-HS512+A256KW</code></td><td></td></tr>
+</table>
+
+For interchangeability JOSESwift currently supports the following serializations and formats:
+
+<table>
+	<tr><th>JWS</th><th>JWE</th><th>JWK</th></tr>
+	<tr><th>Serialization</th><th>Serialization</th><th>Format</th>
+	<tr></td><td rowspan="2">Compact</td><td rowspan="2">Compact</td><td>JSON</td></tr>
+	<tr><td>JWK Set</td></tr>
 </table>
 
 If you are missing a specific feature, algorithm, or serialization, feel free to [submit a pull request](#contributing).
